@@ -304,7 +304,7 @@ async def fetch_model_by_id(model_id: str):
         logger.error(f"Error fetching model by ID: {err}")
         raise HTTPException(status_code=500, detail=f"Error fetching model by ID: {err}")
 
-@app.post("/v1/completions")
+@app.post("/v1/chat/completions")
 async def watsonx_completions(request: Request):
     logger.info("Received a Watsonx completion request.")
 
